@@ -62,16 +62,15 @@ p {
 	color: white;
 	background-color: crimson;
 }
-
 /* Add styles for the rounded logo */
 .brand img.logo {
-	width: 50px; /* Set the size of the logo */
-	height: 500px; /* Set the size of the logo */
-	border-radius: 50%; /* Make the logo rounded */
-	margin-right: 10px; /* Add some space between the logo and the text */
-	vertical-align: middle; /* Align logo with text */
-  }
-  
+  width: 50px; /* Set the size of the logo */
+  height: 50px; /* Set the size of the logo */
+  border-radius: 50%; /* Make the logo rounded */
+  margin-right: 10px; /* Add some space between the logo and the text */
+  vertical-align: middle; /* Align logo with text */
+}
+
 .brand h1 {
 	font-size: 3rem;
 	text-transform: uppercase;
