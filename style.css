@@ -105,38 +105,6 @@ p {
 	padding: 0 10px;
 }
 #header .nav-list ul {
-    width: 100vw;
-    height: 100vh; /* This makes it cover the whole screen */
-    left: 100%;
-    top: 0;
-}
-Fix
-Modify it to limit the height and width so that the dropdown does not cover the whole page.
-
-css
-Copy
-Edit
-#header .nav-list ul {
-    list-style: none;
-    position: absolute;
-    background-color: rgb(31, 30, 30);
-    width: 250px; /* Set a smaller width */
-    height: auto; /* Let it adjust based on content */
-    max-height: 300px; /* Control max height */
-    left: 100%;
-    top: 60px; /* Adjusted to appear below the header */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    overflow: hidden;
-    transition: 0.5s ease left;
-    border-radius: 10px; /* Rounded corners */
-    opacity: 0; /* Hide it initially */
-    visibility: hidden;
-}
-/* #header .nav-list ul {
 	list-style: none;
 	position: absolute;
 	background-color: rgb(31, 30, 30);
@@ -151,15 +119,9 @@ Edit
 	z-index: 1;
 	overflow-x: hidden;
 	transition: 0.5s ease left;
-} */
-/* #header .nav-list ul.active {
-	left: 0%;
-} */
+}
 #header .nav-list ul.active {
-    left: auto;
-    right: 10px; /* Adjusted to position properly */
-    opacity: 1;
-    visibility: visible;
+	left: 0%;
 }
 #header .nav-list ul a {
 	font-size: 2.5rem;
