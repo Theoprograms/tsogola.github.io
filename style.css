@@ -65,8 +65,8 @@ p {
 
 /* Add styles for the rounded logo */
 .brand img.logo {
-	width: 100px; /* Set the size of the logo */
-	height: 100px; /* Set the size of the logo */
+	width: 50px; /* Set the size of the logo */
+	height: 500px; /* Set the size of the logo */
 	border-radius: 50%; /* Make the logo rounded */
 	margin-right: 10px; /* Add some space between the logo and the text */
 	vertical-align: middle; /* Align logo with text */
