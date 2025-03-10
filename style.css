@@ -73,6 +73,7 @@ p {
 
 .brand h1 {
 	font-size: 3rem;
+	font-family: 'Playfair Display', serif;
 	text-transform: uppercase;
 	color: white;
 }
