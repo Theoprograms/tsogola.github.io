@@ -46,10 +46,17 @@ h1 {
 }
 
 h2 {
+    font-family: 'Comic Sans MS', cursive, sans-serif; 
     font-size: 1.8rem;
     margin-top: 20px;
     text-align: center;
 }
+
+.red-first-letter {
+    color: red;
+    font-weight: bold; /* Optional: Make it bold */
+}
+
 
 /* Interpreter list styling */
 .interpreter-list {
@@ -82,11 +89,37 @@ h2 {
 h3 {
     font-size: 1.5rem;
     margin: 10px 0;
+    color: black;
 }
 
 p {
+    color: grey;
     font-size: 1rem;
     margin-bottom: 10px;
+}
+
+/* Adding the zoom-in and zoom-out animation */
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Zoom-in effect */
+    }
+    100% {
+        transform: scale(1); /* Zoom-out effect */
+    }
+}
+
+/* Applying the zoom-in and zoom-out animation to the heading */
+h1.joyous-heading {
+    font-size: 3rem;
+    text-align: center;
+    color: #f1c40f;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    animation: zoomInOut 1.5s ease-in-out infinite;
 }
 
 /* Media Queries for different screen sizes */
