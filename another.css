@@ -1,0 +1,151 @@
+/* Importing the font to match your existing page */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif; /* Match with existing pages */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+    background-image: url('img/hands.jpg');
+    background-size: cover; /* Makes the image cover the entire page */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-position: center center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.5); /* Adjust opacity for fade effect */
+    pointer-events: none; /* Allows clicking through the overlay */
+    z-index: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    color: red; /* Adjust to match your primary color (Purple) */
+    font-weight: 600;
+}
+h2{
+    color: black; /* Adjust to match your primary color (Purple) */
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+}
+
+.interpreter-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.interpreter-card {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    width: 270px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.interpreter-card:hover {
+    transform: translateY(-5px);
+}
+
+.interpreter-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid orangered; /* Purple border to match theme */
+}
+
+.interpreter-card h3 {
+    margin-top: 10px;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.interpreter-card p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+}
+
+/* Button Styling */
+.cta {
+    display: inline-block;
+    background-color: #4A148C; /* Primary color */
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.cta:hover {
+    background-color: #6A1B9A; /* Darker purple for hover effect */
+}
+
+/* Add a gradient color background and stylish font for the heading */
+.joyous-heading {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun and playful font */
+    color: #FF6347; /* Joyous color */
+    font-size: 3em; /* Larger font size */
+    text-align: center;
+    text-transform: uppercase; /* Uppercase for impact */
+    letter-spacing: 3px; /* Adds spacing between letters */
+    background: linear-gradient(45deg, #FF6347, #FFD700); /* Gradient from orange to yellow */
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: joyAnimation 2s ease-in-out infinite alternate; /* Animation for a playful effect */
+    margin-bottom: 30px;
+}
+
+/* Animation for the heading */
+@keyframes joyAnimation {
+    0% {
+        transform: scale(1);
+        color: #FF6347;
+    }
+    50% {
+        transform: scale(1.1);
+        color: #FFD700;
+    }
+    100% {
+        transform: scale(1);
+        color: #FF6347;
+    }
+}
+
+/* Optional: Adding some spacing and text shadow for a more lively look */
+.joyous-heading {
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
