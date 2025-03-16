@@ -5,6 +5,7 @@
 	box-sizing: border-box;
 }
 html {
+
 	font-size: 10px;
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
@@ -419,8 +420,13 @@ p {
 	padding: 100px 20px;
 }
 #about .col-left {
-	width: 250px;
-	height: 360px;
+	width: 100%;
+	max-width: 400px;
+	
+	height: auto; /* Allow the height to adjust */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #about .col-right {
 	width: 100%;
@@ -445,6 +451,8 @@ p {
 	width: 100%;
 	position: relative;
 	border: 10px solid white;
+	object-fit: contain;
+	display: block;
 }
 #about .col-left .about-img::after {
 	content: '';

@@ -7,27 +7,33 @@
     <link rel="stylesheet" href="another.css"> <!-- Link your CSS file -->
 </head>
 <body background="img/hands.jpg">
+
+    <div class="banner">
+        <span class="banner-title">Association of Sign Language Interpreters (ASLI)</span>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchPage()">
+            <span class="search-icon">🔍</span>
+        </div>
+    </div>
+    
     <div class="overlay"></div> <!-- Fading effect applied here -->
     <div class="content">
-    
 
 <!-- Interpreters Page -->
 <section id="interpreters">
     <div class="container">
         <h1 class="joyous-heading">Find an Interpreter</h1>
-        <h1>Association of Sign Language Interpreters(ASLI)</h1> 
 
         <!-- Northern Region -->
         <h2><span class="red-first-letter">N</span>orthern <span class="red-first-letter">R</span>egion </h2>
-
         <div class="interpreter-list">
-            <div class="interpreter-card">
+            <div class="interpreter-card" onclick="openPopup('John Banda', 'Mzuzu, +265 123 456 789')">
                 <img src="img/2.jpg" alt="Interpreter Name">
                 <h3>John Banda</h3>
                 <p>Experienced sign language interpreter based in Mzuzu, passionate about accessibility and inclusion.</p>
             </div>
 
-            <div class="interpreter-card">
+            <div class="interpreter-card" onclick="openPopup('Mary Phiri', 'Mzuzu, +265 987 654 321')">
                 <img src="img/3.jpg" alt="Interpreter Name">
                 <h3>Mary Phiri</h3>
                 <p>Skilled in medical and educational interpretation, serving the Deaf community in the North.</p>
@@ -35,15 +41,15 @@
         </div>
 
         <!-- Central Region -->
-        <h2>Central Region</h2>
+        <h2><span class="red-first-letter">C</span>entral <span class="red-first-letter">R</span>egion </h2>
         <div class="interpreter-list">
-            <div class="interpreter-card">
+            <div class="interpreter-card" onclick="openPopup('James Mvula', 'Lilongwe, +265 345 678 901')">
                 <img src="img/1.jpg" alt="Interpreter Name">
                 <h3>James Mvula</h3>
                 <p>A dedicated interpreter working in Lilongwe, specializing in workplace communication.</p>
             </div>
 
-            <div class="interpreter-card">
+            <div class="interpreter-card" onclick="openPopup('Alice Gondwe', 'Lilongwe, +265 654 321 098')">
                 <img src="img/3.jpg" alt="Interpreter Name">
                 <h3>Alice Gondwe</h3>
                 <p>Sign language expert with a focus on education and community programs.</p>
@@ -51,15 +57,15 @@
         </div>
 
         <!-- Southern Region -->
-        <h2>Southern Region</h2>
+        <h2><span class="red-first-letter">S</span>outhern <span class="red-first-letter">R</span>egion </h2>
         <div class="interpreter-list">
-            <div class="interpreter-card">
+            <div class="interpreter-card" onclick="openPopup('Peter Kaunda', 'Blantyre, +265 789 012 345')">
                 <img src="img/2.jpg" alt="Interpreter Name">
                 <h3>Peter Kaunda</h3>
                 <p>Professional interpreter based in Blantyre, working with NGOs and corporate clients.</p>
             </div>
 
-            <div class="interpreter-card">
+            <div class="interpreter-card" onclick="openPopup('Linda Nkhoma', 'Blantyre, +265 210 987 654')">
                 <img src="img/3.jpg" alt="Interpreter Name">
                 <h3>Linda Nkhoma</h3>
                 <p>Specialized in legal and public service interpretation, ensuring accessibility in the South.</p>
@@ -67,6 +73,28 @@
         </div>
     </div>
 </section>
+
+<!-- Popup Modal -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2 id="popupName"></h2>
+        <p id="popupContact"></p>
+        <button class="book-btn">Book Now</button>
+    </div>
+</div>
+
+<script>
+    function openPopup(name, contact) {
+        document.getElementById("popupName").innerText = name;
+        document.getElementById("popupContact").innerText = "Contact: " + contact;
+        document.getElementById("popup").style.display = "block";
+    }
+
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
 
 </body>
 </html>

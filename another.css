@@ -57,6 +57,147 @@ h2 {
     font-weight: bold; /* Optional: Make it bold */
 }
 
+/* Banner Styling */
+/* Professional Banner */
+/* Professional Gradient Banner */
+.banner {
+    background: linear-gradient(to right, #FF0000, #FF7F00, #FFD700); /* Red-Orange-Yellow Gradient */
+    padding: 15px 5%;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Arial", sans-serif;
+    flex-wrap: wrap;
+}
+
+/* Title Styling */
+.banner-title {
+    font-size: 1.5rem;
+    flex: 1; /* Allows text to resize flexibly */
+    min-width: 200px;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 20px;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+/* Search Input */
+#searchInput {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 1rem;
+    background: transparent;
+    color: white;
+    width: 150px;
+}
+
+#searchInput::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Search Icon */
+.search-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 5%;
+    }
+    
+    .banner-title {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+    .search-box {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+}
+/* Popup Modal Styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    z-index: 10;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.book-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.book-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Background blur effect */
+.popup::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+
+/* Adjust body padding so content doesn't overlap with the banner */
+body {
+    padding-top: 60px;
+}
+
 
 /* Interpreter list styling */
 .interpreter-list {
