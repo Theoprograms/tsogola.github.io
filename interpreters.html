@@ -80,7 +80,8 @@
         <span class="close-btn" onclick="closePopup()">&times;</span>
         <h2 id="popupName"></h2>
         <p id="popupContact"></p>
-        <button class="book-btn">Book Now</button>
+        <button class="book-btn" onclick="callInterpreter('+265997048321')">Book Now</button>
+
     </div>
 </div>
 
@@ -94,6 +95,10 @@
     function closePopup() {
         document.getElementById("popup").style.display = "none";
     }
+    function callInterpreter(phoneNumber) {
+    window.location.href = "tel:" + phoneNumber;
+}
+
 </script>
 
 </body>
